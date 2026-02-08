@@ -19,12 +19,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const slides = gameSlider.querySelectorAll(".bg-slide");
 
     const backgrounds = [
-      "assets/images/game/images-1.jpg",
-      "assets/images/game/images-2.jpg",
-      "assets/images/game/images-3.jpg",
-      "assets/images/game/images-4.jpg",
-      "assets/images/game/images-5.jpg",
-      "assets/images/game/images-6.jpg"
+      "game/images-1.jpg",
+      "game/images-2.jpg",
+      "game/images-3.jpg",
+      "game/images-4.jpg",
+      "game/images-5.jpg",
+      "game/images-6.jpg"
     ];
 
     let currentIndex = 0;
@@ -217,3 +217,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 });
+
