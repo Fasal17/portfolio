@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Security Awareness Challenge</title>
+<link rel="stylesheet" href="css/style.css" />
+<script src="js/main.js"></script>
+<script defer src="js/game.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar">
+      <div class="logo">MF</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="writeups.html">Projects</a></li>
+        <li><a href="game.html" class="active">Game</a></li>
+      </ul>
+      <div class="theme-toggle">
+        <button id="theme-btn" aria-label="Toggle dark/light mode">🌗</button>
+      </div>
+      <button class="mobile-menu-toggle" aria-label="Open navigation menu">☰</button>
+    </nav>
+  </header>
+
+<main class="game-bg-slider">
+
+  <!-- Background image layers -->
+  <div class="bg-slide active"></div>
+  <div class="bg-slide"></div>
+
+  <!-- Dark overlay -->
+  <div class="game-bg-overlay"></div>
+
+  <!-- Quiz Intro -->
+  <section id="quiz-intro" class="quiz-intro-section">
+    <h1>Security Awareness Challenge</h1>
+    <p>Test your knowledge on cybersecurity topics!</p>
+    <button id="start-quiz-btn" class="btn btn-primary">Start Quiz</button>
+  </section>
+
+  <!-- Quiz Section -->
+  <section id="quiz-section" class="quiz-section hidden">
+    <div class="progress">
+      <span id="question-number">Question 1</span>
+      <div class="progress-bar">
+        <div id="progress-fill"></div>
+      </div>
+    </div>
+
+    <div id="question-container" class="question-container">
+      <p id="question-text">Question text will appear here.</p>
+      <ul id="answer-buttons" class="answer-buttons">
+        <!-- Answer options injected by JS -->
+      </ul>
+    </div>
+
+    <button id="next-btn" class="btn btn-secondary hidden">Next</button>
+  </section>
+
+  <!-- Result Section -->
+  <section id="result-section" class="result-section hidden">
+    <h2>Quiz Complete!</h2>
+    <p>Your Score: <span id="score"></span></p>
+    <p>Best Score: <span id="best-score"></span></p>
+    <p>Awareness Level: <span id="level"></span></p>
+    <button id="retry-btn" class="btn btn-primary">Retry Quiz</button>
+  </section>
+
+</main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 Muhammed Fasal. All rights reserved.</p>
+  </footer>
+</body>
+</html>

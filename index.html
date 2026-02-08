@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Muhammed Fasal - Cybersecurity Researcher</title>
+<link rel="stylesheet" href="css/style.css" />
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+<script defer src="js/main.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar">
+      <div class="logo">MF</div>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="writeups.html">Projects</a></li>
+        <li><a href="game.html">Game</a></li>
+      </ul>
+      <div class="theme-toggle">
+        <button id="theme-btn" aria-label="Toggle dark/light mode">🌗</button>
+      </div>
+      <button class="mobile-menu-toggle" aria-label="Open navigation menu">☰</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+<section id="hero" class="hero-section">
+  <div class="hero-bg"></div>
+
+  <div class="hero-content">
+    <!-- Avatar -->
+    <div class="hero-avatar">
+      <img
+        src="assets/images/hero.jpg"
+        alt="Muhammed Fasal"
+      />
+    </div>
+
+    <!-- Text -->
+    <h1 class="hero-name">Muhammed Fasal</h1>
+
+    <p class="hero-role">
+      Cybersecurity Researcher · VAPT Specialist · Bug Bounty Hunter · Trainer
+    </p>
+
+    <p class="hero-tagline">
+      Building secure systems with passion and expertise.
+    </p>
+
+<!-- Actions -->
+<div class="hero-buttons">
+
+  <!-- Download / View CV -->
+  <a
+    href="https://drive.google.com/file/d/1octWRAbE3medplETvvLROecskbk-43t1/view?usp=sharing"
+    target="_blank"
+    rel="noopener"
+    class="btn primary"
+    id="download-cv-btn"
+  >
+    Download CV
+  </a>
+
+  <!-- Preview CV -->
+  <a
+    href="https://drive.google.com/file/d/1octWRAbE3medplETvvLROecskbk-43t1/preview"
+    target="_blank"
+    rel="noopener"
+    class="btn btn-secondary"
+    id="preview-cv-btn"
+  >
+    Preview CV
+  </a>
+
+</div>
+</section>
+
+
+
+    <!-- About Section -->
+    <section id="about" class="about-section reveal">
+      <h2>About Me</h2>
+      <p>I am a passionate cybersecurity professional with expertise in vulnerability assessment, penetration testing (VAPT), and bug bounty hunting. With years of experience, I help organizations strengthen their security posture through thorough audits and research. I am also dedicated to promoting security awareness by conducting training sessions for teams and communities.</p>
+      <p>My work spans web application security, network security, and custom security tool development. I contribute to various bug bounty platforms and engage with the community to share insights on the latest threats and mitigation strategies.</p>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section reveal">
+      <h2>Core Skills</h2>
+      <div class="skills-list">
+        <div class="skill-item">Web Application Security</div>
+        <div class="skill-item">Vulnerability Assessment & Penetration Testing (VAPT)</div>
+        <div class="skill-item">Bug Bounty Hunting</div>
+        <div class="skill-item">OWASP Top 10</div>
+        <div class="skill-item">Network Security</div>
+        <div class="skill-item">Linux / Kali Linux</div>
+      </div>
+      <h3>Tools & Technologies</h3>
+      <div class="tools-list">
+        <div class="tool-item">Burp Suite</div>
+        <div class="tool-item">Nmap</div>
+        <div class="tool-item">Metasploit</div>
+        <div class="tool-item">Nikto</div>
+        <div class="tool-item">SQLMap</div>
+      </div>
+    </section>
+
+    <!-- Social Links Section -->
+    <section id="social" class="social-section reveal">
+      <h2>Find Me Online</h2>
+      <div class="social-links">
+        <a class="social-btn bugcrowd" 
+     href="https://bugcrowd.com/h/Fasal17" target="_blank">
+     🐞 Bugcrowd
+  </a>
+
+  <a class="social-btn linkedin" 
+     href="https://www.linkedin.com/in/muhammed-fasal-ms/" target="_blank">
+     💼 LinkedIn
+  </a>
+
+  <a class="social-btn github" 
+     href="https://github.com/Fasal17" target="_blank">
+     🧑‍💻 GitHub
+  </a>
+      </div>
+    </section>
+
+    <!-- Modal for CV Preview -->
+    <div id="cv-modal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="modalTitle">
+      <div class="modal-content">
+        <button class="modal-close" aria-label="Close">&times;</button>
+        <h2 id="modalTitle">Muhammed Fasal - CV</h2>
+        <iframe 
+  src="assets/cv/Muhammed-Fasal-CV.pdf"
+  title="Muhammed Fasal CV"
+  loading="lazy">
+</iframe>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 Muhammed Fasal. Email: <a href="mailto:fasalmuhammad44@gmail.com">fasalmuhammad44@gmail.com</a></p>
+  </footer>
+</body>
+</html>

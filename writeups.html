@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Projects & Write-Ups - Muhammed Fasal</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+<header class="site-header">
+  <nav class="navbar">
+    <div class="logo">MF</div>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="profile.html">Profile</a></li>
+      <li><a href="writeups.html" class="active">Projects</a></li>
+      <li><a href="game.html">Game</a></li>
+    </ul>
+
+    <button class="theme-toggle" id="theme-btn" aria-label="Toggle theme">🌗</button>
+
+    <button class="mobile-menu-toggle" id="menuToggle" aria-label="Toggle menu">
+      ☰
+    </button>
+  </nav>
+</header>
+
+  <main>
+    <!-- Intro Section -->
+    <section id="writeups-intro" class="writeups-intro-section reveal">
+      <h1>🧠 Security Write-Ups, Projects & Case Studies</h1>
+      <p>Explore my security projects, bug bounty reports, and automation tools.</p>
+    </section>
+
+    <!-- Featured Project -->
+    <section id="featured-project" class="featured-project-section reveal">
+      <h2>Featured Project: AutoBrowserSwitch</h2>
+      <p>A lightweight Python automation tool to enhance browsing workflows.</p>
+      <p><strong>Description:</strong> AutoBrowserSwitch automatically closes specified browser windows and redirects to another site after a delay. It uses Python libraries to detect and control browser processes.</p>
+      <p><strong>Purpose:</strong> Used for automation learning, GUI control, intern training, and workflow optimization.</p>
+      <p><strong>Tech Stack:</strong> Python, pyautogui, pygetwindow, webbrowser, time</p>
+      <!-- Add links or images as needed -->
+    </section>
+
+    <!-- Project Cards -->
+<section id="projects" class="projects-section reveal">
+  <h2>Other Projects</h2>
+
+  <div class="projects-grid">
+    <div class="project-card">
+
+      <h3>🌦 Weather Prediction System (Machine Learning)</h3>
+
+      <div class="project-meta">
+        <span>Machine Learning</span>
+        <span>Data Science</span>
+        <span>Web Application</span>
+      </div>
+
+      <p><strong>Team Size:</strong> 4</p>
+
+      <p class="project-desc">
+        Built a machine learning–based weather prediction system that forecasts 
+        <strong>rainfall occurrence (Yes / No)</strong> using 
+        <strong>10 years of historical weather data</strong>.  
+        The system uses temperature, humidity, and pressure to deliver fast, 
+        data-driven predictions without complex meteorological models.
+      </p>
+
+      <h4>📌 Problem Statement</h4>
+      <ul>
+        <li>Traditional systems require high computational power</li>
+        <li>Depend on satellite and real-time sensor data</li>
+        <li>Complex and costly for small-scale applications</li>
+      </ul>
+      <p>
+        This project provides a <strong>lightweight, efficient alternative</strong> 
+        using supervised machine learning.
+      </p>
+
+      <h4>⚙️ How the System Works</h4>
+      <ol>
+        <li>
+          <strong>Data Collection:</strong>
+          Historical weather data from NOAA, Kaggle, and OpenWeatherMap (10 years)
+        </li>
+        <li>
+          <strong>Data Preprocessing:</strong>
+          Handling missing values, normalization, and categorical encoding
+        </li>
+        <li>
+          <strong>Feature Selection:</strong>
+          Temperature, Humidity, Pressure
+        </li>
+        <li>
+          <strong>Model Training:</strong>
+          Logistic Regression (80% training, 20% testing)
+        </li>
+        <li>
+          <strong>Model Evaluation:</strong>
+          Accuracy, Precision, Recall, F1-Score
+        </li>
+        <li>
+          <strong>Prediction Interface:</strong>
+          User inputs parameters → instant rainfall prediction
+        </li>
+      </ol>
+
+      <h4>🛠 Tech Stack</h4>
+      <p>Python, Pandas, NumPy, Scikit-learn, Flask, HTML, CSS</p>
+
+    </div>
+
+        <div class="project-card">
+
+  <h3>🔐 Penetration Testing – Hospital Management System</h3>
+
+  <div class="project-meta">
+    <span>Penetration Testing</span>
+    <span>Web Security</span>
+    <span>OWASP Top 10</span>
+  </div>
+
+  <p><strong>Target:</strong> Hospital Management System (PHP – PHPGurukul)</p>
+  <p><strong>Total Vulnerabilities Identified:</strong> 23</p>
+
+  <p class="project-desc">
+    Conducted a comprehensive penetration testing assessment on a Hospital Management 
+    System to identify vulnerabilities affecting confidentiality, integrity, and availability. 
+    The assessment revealed multiple <strong>Critical and High severity flaws</strong> that could 
+    lead to authentication bypass, account takeover, sensitive medical data exposure, and 
+    full system compromise.
+  </p>
+
+  <h4>📌 Scope of Assessment</h4>
+  <ul>
+    <li>Admin Panel, Doctor Panel, Patient Portal</li>
+    <li>Authentication & Session Management</li>
+    <li>Database Interactions</li>
+    <li>File Upload Functionalities</li>
+  </ul>
+
+  <h4>🧪 Methodology</h4>
+  <ul>
+    <li>Manual request manipulation</li>
+    <li>Authentication & authorization testing</li>
+    <li>OWASP Top 10 (2021 / 2023)</li>
+    <li>Black-box and Grey-box testing</li>
+  </ul>
+
+  <h4>🛠 Tools & Standards</h4>
+  <p>Manual Testing, Burp Suite, OWASP Top 10, CVSS Scoring</p>
+
+  <h4>✅ Outcome</h4>
+  <p>
+    Delivered a detailed penetration testing report with clear attack scenarios, 
+    impact analysis, CVSS scoring, and remediation recommendations. 
+    The application was classified as <strong>HIGH RISK</strong> and requires immediate 
+    security hardening before production deployment.
+  </p>
+
+</div>
+
+        <div class="project-card">
+
+  <h3>🧪 Custom Privilege Escalation CTF Machine (Self-Created)</h3>
+
+  <div class="project-meta">
+    <span>Linux Privilege Escalation</span>
+    <span>CTF Lab Design</span>
+    <span>Offensive Security</span>
+  </div>
+
+  <p><strong>Project Type:</strong> Self-Designed Vulnerable Machine</p>
+  <p><strong>Difficulty:</strong> Beginner → Advanced PrivEsc</p>
+
+  <p class="project-desc">
+    Designed and built a custom Linux-based Capture The Flag (CTF) machine focused on 
+    <strong>post-exploitation and privilege escalation techniques</strong>.  
+    The system was intentionally misconfigured to simulate real-world Linux security flaws, 
+    allowing testers to practice enumeration, exploitation, and root compromise in a safe lab environment.
+  </p>
+
+  <h4>🎯 Learning Objective</h4>
+  <ul>
+    <li>Understand real-world Linux privilege escalation vectors</li>
+    <li>Practice deep enumeration and misconfiguration discovery</li>
+    <li>Demonstrate attacker mindset after initial access</li>
+  </ul>
+
+  <h4>⚙️ Lab Design & Enumeration</h4>
+  <ul>
+    <li>Hidden flags across user and system directories</li>
+    <li>Script analysis for embedded secrets</li>
+    <li>Recursive directory traversal and permission analysis</li>
+  </ul>
+
+  <h4>🚨 Privilege Escalation Techniques Implemented</h4>
+  <ul>
+    <li><strong>Sudo Misconfiguration:</strong> NOPASSWD access to <code>find</code> (GTFOBins)</li>
+    <li><strong>SUID Binary Abuse:</strong> Custom root-executing binary</li>
+    <li><strong>Linux Capabilities Abuse:</strong> <code>cap_setuid</code> privilege escalation</li>
+    <li><strong>Vulnerable Cron Job:</strong> Tar wildcard injection</li>
+    <li><strong>World-Writable systemd Service:</strong> Root service manipulation</li>
+    <li><strong>World-Writable Root Script:</strong> Arbitrary command execution as root</li>
+  </ul>
+
+  <h4>🏁 Flags & Validation</h4>
+  <ul>
+    <li>User-level flags (easy + hidden)</li>
+    <li>Root-level flags confirming full system compromise</li>
+  </ul>
+
+  <h4>🛠 Tools & Techniques</h4>
+  <p>Linux, Bash, GTFOBins, File Permission Analysis, SUID, Capabilities, Cron, systemd</p>
+
+  <h4>🛡 Defensive Takeaways</h4>
+  <p>
+    Provided remediation guidance including sudo hardening, permission fixes, 
+    removal of unnecessary SUID/capabilities, and enforcing least privilege.
+  </p>
+
+</div>
+
+        <div class="project-card">
+
+  <h3>📊 Security Assessment & Vulnerability Tracking System</h3>
+
+  <div class="project-meta">
+    <span>Vulnerability Management</span>
+    <span>Risk Assessment</span>
+    <span>Security Documentation</span>
+  </div>
+
+  <p><strong>Project Type:</strong> Self-Created Security Documentation Tool</p>
+
+  <p class="project-desc">
+    Designed and maintained a structured security assessment and vulnerability tracking system 
+    using Excel to document, prioritize, and manage security findings discovered during 
+    penetration testing and security reviews.  
+    This system mirrors real-world vulnerability management workflows used by 
+    security teams and consultancies.
+  </p>
+
+  <h4>📌 Purpose</h4>
+  <ul>
+    <li>Centralize vulnerability findings in a single, organized format</li>
+    <li>Track severity, risk level, and remediation status</li>
+    <li>Support structured reporting and decision-making</li>
+  </ul>
+
+  <h4>📋 Data Captured</h4>
+  <ul>
+    <li>Vulnerability name & category</li>
+    <li>Affected module / endpoint</li>
+    <li>Severity & risk rating</li>
+    <li>Technical description & impact</li>
+    <li>Recommended remediation</li>
+    <li>Status (Open / Fixed / Verified)</li>
+  </ul>
+
+  <h4>🧠 Security Concepts Applied</h4>
+  <ul>
+    <li>OWASP Top 10 mapping</li>
+    <li>Risk-based prioritization</li>
+    <li>Impact vs likelihood analysis</li>
+    <li>Security documentation best practices</li>
+  </ul>
+
+  <h4>🛠 Tools</h4>
+  <p>Microsoft Excel / Google Sheets, Manual Security Analysis</p>
+
+  <h4>✅ Outcome</h4>
+  <p>
+    Improved clarity, traceability, and prioritization of security issues. 
+    This tracker demonstrates an understanding of how vulnerabilities are 
+    documented, communicated, and managed in professional security engagements.
+  </p>
+
+</div>
+
+        <!-- Add more project cards as needed -->
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 Muhammed Fasal. All rights reserved.</p>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>
