@@ -1,74 +1,50 @@
-// main.js – Site-wide JavaScript (FIXED & CLEAN)
+// main.js – FINAL CLEAN WORKING VERSION
 
 document.addEventListener("DOMContentLoaded", () => {
-  
-      /* ===============================
+
+  /* ===============================
      PREFERS REDUCED MOTION
-  ================================ */
+  =============================== */
   const prefersReduced = window.matchMedia(
     "(prefers-reduced-motion: reduce)"
   ).matches;
 
   /* ===============================
-     GAME PAGE BACKGROUND SLIDER (SMOOTH)
-  ================================ */
+     MOBILE NAVIGATION (FIXED)
+  =============================== */
+  const menuToggle = document.getElementById("menuToggle");
+  const navLinks = document.getElementById("navLinks");
 
-  const gameSlider = document.querySelector(".game-bg-slider");
+  if (menuToggle && navLinks) {
 
-  if (gameSlider && !prefersReduced) {
-    const slides = gameSlider.querySelectorAll(".bg-slide");
-
-    const backgrounds = [
-      "game/images-1.jpg",
-      "game/images-2.jpg",
-      "game/images-3.jpg",
-      "game/images-4.jpg",
-      "game/images-5.jpg",
-      "game/images-6.jpg"
-    ];
-
-    let currentIndex = 0;
-    let visibleSlide = 0;
-    let hiddenSlide = 1;
-
-    // preload images
-    backgrounds.forEach(src => {
-      const img = new Image();
-      img.src = src;
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("active"); // ✅ use ACTIVE not open
+      document.body.classList.toggle("nav-open");
     });
 
-    // initial state
-    slides[visibleSlide].style.backgroundImage =
-      `url(${backgrounds[currentIndex]})`;
-    slides[visibleSlide].classList.add("active");
-
-    setInterval(() => {
-      currentIndex = (currentIndex + 1) % backgrounds.length;
-
-      // set next image ONLY on hidden slide
-      slides[hiddenSlide].style.backgroundImage =
-        `url(${backgrounds[currentIndex]})`;
-
-      // fade transition
-      slides[hiddenSlide].classList.add("active");
-      slides[visibleSlide].classList.remove("active");
-
-      // swap roles AFTER fade
-      [visibleSlide, hiddenSlide] = [hiddenSlide, visibleSlide];
-
-    }, 6500); // smooth timing
+    navLinks.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+        document.body.classList.remove("nav-open");
+      });
+    });
   }
 
   /* ===============================
      THEME TOGGLE
-  ================================ */
+  =============================== */
   const themeBtn = document.getElementById("theme-btn");
+
   if (themeBtn) {
     const savedTheme = localStorage.getItem("theme") || "dark";
-    if (savedTheme === "light") document.body.classList.add("light");
+
+    if (savedTheme === "light") {
+      document.body.classList.add("light");
+    }
 
     themeBtn.addEventListener("click", () => {
       document.body.classList.toggle("light");
+
       localStorage.setItem(
         "theme",
         document.body.classList.contains("light") ? "light" : "dark"
@@ -78,89 +54,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
   /* ===============================
      SCROLL REVEAL
-  ================================ */
+  =============================== */
   const reveals = document.querySelectorAll(".reveal");
+
   if (reveals.length) {
-    const observer = new IntersectionObserver(
-      entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("active");
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.15 }
-    );
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("active");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
 
     reveals.forEach(el => observer.observe(el));
   }
 
   /* ===============================
-     CV MODAL
-  ================================ */
-  const cvModal = document.getElementById("cv-modal");
-  const previewCvBtn = document.getElementById("preview-cv-btn");
-
-  if (cvModal && previewCvBtn) {
-    const cvCloseBtn = cvModal.querySelector(".modal-close");
-
-    previewCvBtn.addEventListener("click", () => {
-      cvModal.style.display = "flex";
-      cvModal.setAttribute("aria-hidden", "false");
-    });
-
-    cvCloseBtn.addEventListener("click", () => closeCv());
-    cvModal.addEventListener("click", e => {
-      if (e.target === cvModal) closeCv();
-    });
-
-    function closeCv() {
-      cvModal.style.display = "none";
-      cvModal.setAttribute("aria-hidden", "true");
-    }
-  }
-
-  /* ===============================
-     CERTIFICATE MODAL ✅ FIXED
-  ================================ */
-  const certModal = document.getElementById("certificateModal");
-  const certImage = document.getElementById("certificateImage");
-  const certCloseBtn = document.querySelector(".certificate-close");
-
-  if (certModal && certImage && certCloseBtn) {
-
-    document.querySelectorAll(".view-cert-btn").forEach(btn => {
-      btn.addEventListener("click", () => {
-        const src = btn.dataset.src;
-        if (!src) return alert("Certificate file not found");
-
-        certImage.src = src;
-        certModal.classList.add("active");
-        certModal.setAttribute("aria-hidden", "false");
-      });
-    });
-
-    function closeCert() {
-      certModal.classList.remove("active");
-      certModal.setAttribute("aria-hidden", "true");
-      certImage.src = "";
-    }
-
-    certCloseBtn.addEventListener("click", closeCert);
-    certModal.addEventListener("click", e => {
-      if (e.target === certModal) closeCert();
-    });
-
-    document.addEventListener("keydown", e => {
-      if (e.key === "Escape") closeCert();
-    });
-  }
-
-
-  /* ===============================
      MAGNETIC BUTTONS
-  ================================ */
+  =============================== */
   if (!prefersReduced) {
     document.querySelectorAll(".btn-primary").forEach(btn => {
       btn.addEventListener("mousemove", e => {
@@ -178,7 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   /* ===============================
      3D PROJECT CARD TILT
-  ================================ */
+  =============================== */
   if (!prefersReduced) {
     document.querySelectorAll(".project-card").forEach(card => {
       card.addEventListener("mousemove", e => {
@@ -198,27 +110,4 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-/* ===============================
-   MOBILE NAV TOGGLE (CLEAN)
-================================ */
-
-const menuToggle = document.getElementById("menuToggle");
-const navLinks = document.getElementById("navLinks");
-
-if (menuToggle && navLinks) {
-  menuToggle.addEventListener("click", () => {
-    navLinks.classList.toggle("open");
-    document.body.classList.toggle("nav-open"); // optional: lock scroll
-  });
-
-  // Close menu when clicking link
-  navLinks.querySelectorAll("a").forEach(link => {
-    link.addEventListener("click", () => {
-      navLinks.classList.remove("open");
-      document.body.classList.remove("nav-open");
-    });
-  });
-}
-
-
-
+});
