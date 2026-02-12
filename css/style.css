@@ -706,4 +706,29 @@ body {
 }
 
 
+/* ===============================
+   HERO BUTTON MOBILE FIX
+================================ */
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 480px) {
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-buttons .btn {
+    width: 80%;
+    max-width: 280px;
+  }
+}
+
+
+
 
