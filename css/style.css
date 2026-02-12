@@ -730,5 +730,20 @@ body {
 }
 
 
+@media (max-width: 480px) {
+  .hero-name {
+    font-size: 2rem;
+  }
+
+  .hero-role {
+    font-size: 1rem;
+  }
+
+  .hero-section {
+    padding: 4rem 1rem;
+  }
+}
+
+
 
 
