@@ -671,3 +671,39 @@ body {
   }
 }
 
+/* ===============================
+   MOBILE NAVIGATION FIX
+================================ */
+
+@media (max-width: 768px) {
+
+  .nav-links {
+    position: fixed;
+    top: 70px;
+    right: -100%;
+    width: 250px;
+    height: calc(100vh - 70px);
+    background: var(--background-secondary);
+    flex-direction: column;
+    padding: 2rem;
+    transition: right 0.4s ease;
+    box-shadow: -5px 0 20px rgba(0,0,0,0.4);
+    z-index: 999;
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  .nav-links li {
+    margin: 1.2rem 0;
+  }
+
+  .mobile-menu-toggle {
+    display: block;
+    cursor: pointer;
+  }
+}
+
+
+
