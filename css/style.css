@@ -530,30 +530,35 @@ section h2 {
 }
 
 /* ===============================
-   GAME BACKGROUND – PERFECT FIT
+   GAME BACKGROUND (CLEAN & STABLE)
 ================================ */
 
 .game-bg-slider {
-  position: relative;              /* ✅ REQUIRED */
-  width: 100%;
-  height: calc(100vh - 80px);       /* ✅ FIXED HEIGHT */
+  position: relative;
+  min-height: 100vh;
   overflow: hidden;
-  margin: 0;
-  padding: 0;
+  padding: 4rem 1rem;
 }
 
 /* Background image layers */
 .bg-slide {
   position: absolute;
   inset: 0;
-
-  background-size: cover;          /* ✅ FULL FIT */
-  background-position: center;     /* ✅ BALANCED CROP */
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
   opacity: 0;
-  transition: opacity 1.5s ease-in-out;
+  transition: opacity 1.2s ease-in-out;
+  z-index: -2;
+}
+
+/* IMPORTANT: ADD YOUR IMAGE PATHS HERE */
+.bg-slide:nth-child(1) {
+  background-image: url("../assets/images/images.jpg");
+}
+
+.bg-slide:nth-child(2) {
+  background-image: url("../assets/images/images (1).jpg");
 }
 
 .bg-slide.active {
@@ -564,8 +569,8 @@ section h2 {
 .game-bg-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.55);
-  z-index: 1;
+  background: rgba(0,0,0,0.65);
+  z-index: -1;
 }
 
 /* Content above background */
@@ -574,24 +579,6 @@ section h2 {
   z-index: 2;
 }
 
-/* Light mode */
-body.light .game-bg-overlay {
-  background: rgba(255, 255, 255, 0.75);
-}
-
-/* ===============================
-   FORCE GAME PAGE FULL WIDTH
-================================ */
-
-body {
-  overflow-x: hidden;
-}
-
-.game-bg-slider {
-  width: 100vw;          /* ✅ FULL viewport width */
-  max-width: 100vw;
-  margin-left: calc(50% - 50vw); /* 🔥 breaks out of centered layout */
-}
 .project-meta {
   display: flex;
   gap: 10px;
@@ -717,6 +704,7 @@ body {
     padding: 4rem 1rem;
   }
 }
+
 
 
 
