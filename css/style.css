@@ -530,19 +530,13 @@ section h2 {
 }
 
 /* ===============================
-   GAME BACKGROUND (CLEAN & STABLE)
-================================ */
-
-/* ===============================
-   MOBILE SAFE GAME BACKGROUND
+   GAME BACKGROUND FIXED
 ================================ */
 
 .game-bg-slider {
   position: relative;
-  width: 100%;
-  min-height: 100dvh;   /* 🔥 NEW viewport unit (mobile safe) */
+  min-height: 100dvh;
   overflow: hidden;
-  padding: 4rem 1rem;
 }
 
 /* Fallback for older browsers */
@@ -552,7 +546,6 @@ section h2 {
   }
 }
 
-/* Background image layers */
 .bg-slide {
   position: absolute;
   inset: 0;
@@ -564,20 +557,35 @@ section h2 {
   z-index: 0;
 }
 
-/* IMPORTANT: ADD YOUR IMAGE PATHS HERE */
+/* 🔥 USE YOUR REAL FILE NAMES */
 .bg-slide:nth-child(1) {
-  background-image: url("../assets/images/images.jpg");
+  background-image: url("game/images-1.jpg");
 }
 
 .bg-slide:nth-child(2) {
-  background-image: url("../assets/images/images (1).jpg");
+  background-image: url("game/images-2.jpg");
+}
+
+.bg-slide:nth-child(3) {
+  background-image: url("game/images-3.jpg");
+}
+
+.bg-slide:nth-child(4) {
+  background-image: url("game/images-4.jpg");
+}
+
+.bg-slide:nth-child(5) {
+  background-image: url("game/images-5.jpg");
+}
+
+.bg-slide:nth-child(6) {
+  background-image: url("game/images-6.jpg");
 }
 
 .bg-slide.active {
   opacity: 1;
 }
 
-/* Dark overlay */
 .game-bg-overlay {
   position: absolute;
   inset: 0;
@@ -585,7 +593,6 @@ section h2 {
   z-index: 1;
 }
 
-/* Content above background */
 .game-bg-slider > section {
   position: relative;
   z-index: 2;
@@ -716,6 +723,7 @@ section h2 {
     padding: 4rem 1rem;
   }
 }
+
 
 
 
