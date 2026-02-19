@@ -561,7 +561,7 @@ section h2 {
   background-repeat: no-repeat;
   opacity: 0;
   transition: opacity 1.2s ease-in-out;
-  z-index: -2;
+  z-index: 0;
 }
 
 /* IMPORTANT: ADD YOUR IMAGE PATHS HERE */
@@ -582,7 +582,7 @@ section h2 {
   position: absolute;
   inset: 0;
   background: rgba(0,0,0,0.65);
-  z-index: -1;
+  z-index: 1;
 }
 
 /* Content above background */
@@ -716,6 +716,7 @@ section h2 {
     padding: 4rem 1rem;
   }
 }
+
 
 
 
